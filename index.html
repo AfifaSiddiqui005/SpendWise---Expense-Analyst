@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpendWise – Smart Expense Analyst</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <button id="toggle-sidebar" class="toggle-btn">☰</button>
+        </div>
+
+        <div class="logo-wrapper">
+          <img src="assets/Logo1.png" class="logo-img" />
+        </div>
+
+        <nav class="nav">
+          <button class="nav-btn active" data-target="dashboard">
+            Dashboard
+          </button>
+          <button class="nav-btn" data-target="history">Expense History</button>
+          <button class="nav-btn" data-target="summary">Summary</button>
+        </nav>
+      </aside>
+      <main class="main">
+        <header class="topbar">
+          <div class="topbar-left">
+            <img src="assets/Logo-main.png" class="mainlogo-img" />
+          </div>
+        </header>
+        <div class="tagline">
+          <h2>Understand where your money actually goes.</h2>
+        </div>
+        <section id="dashboard" class="page active-page">
+          <div class="dashboard-grid">
+            <div class="card">
+              <form id="expense-form">
+                <input
+                  type="text"
+                  id="expense-name"
+                  placeholder="Expense name"
+                  required
+                />
+                <input
+                  type="number"
+                  id="expense-amount"
+                  placeholder="Amount"
+                  required
+                />
+
+                <select id="expense-category" required>
+                  <option value="Select" selected disabled>
+                    Select category
+                  </option>
+                  <option value="Food">Food</option>
+                  <option value="Transport">Transport</option>
+                  <option value="Rent/Housing">Rent/Housing</option>
+                  <option value="Utilities">Utilities</option>
+                  <option value="Grocery">Grocery</option>
+                  <option value="Entertainment">Entertainment</option>
+                  <option value="Health Care">Health Care</option>
+                  <option value="Shopping">Shopping</option>
+                  <option value="Subscriptions">Subscriptions</option>
+                  <option value="Education">Education</option>
+                  <option value="Bills">Bills</option>
+                  <option value="Luxury">Luxury</option>
+                  <option value="Other">Other</option>
+                </select>
+
+                <button type="submit">Add Expense</button>
+              </form>
+            </div>
+            <div class="card">
+              <div id="category-graph"></div>
+            </div>
+          </div>
+          <div class="card insight-card">
+            <p id="insight-text">
+              Add your first expense to unlock spending insights.
+            </p>
+          </div>
+        </section>
+        <section id="history" class="page">
+          <div class="card">
+            <div id="expense-list"></div>
+          </div>
+        </section>
+        <section id="summary" class="page">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <p>Total Spent</p>
+              <h2 id="total-expense">₹0</h2>
+            </div>
+
+            <div class="stat-card">
+              <p>Luxury Spent</p>
+              <h2 id="luxury-total">₹0</h2>
+            </div>
+
+            <div class="stat-card">
+              <p>Total Expenses</p>
+              <h2 id="expense-count">0</h2>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
