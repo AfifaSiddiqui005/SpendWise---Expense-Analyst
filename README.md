@@ -8,6 +8,20 @@ It allows users to record daily expenses, view category-wise distribution, and r
 
 The goal of this project was to move beyond static pages and build a structured, data-driven interface using core JavaScript concepts without relying on frameworks.
 
+## Project Preview
+
+<div align="center">
+
+| Dashboard                                                       | Expense History                                                     | Summary & Insights                                                       |
+| --------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| <img src="./assets/Dashboard.jpg" alt="Dashboard" width="100%"> | <img src="./assets/History.jpg" alt="Expense History" width="100%"> | <img src="./assets/Summary.jpg" alt="Summary and Insights" width="100%"> |
+
+</div>
+
+> A quick overview of expense tracking, transaction history, and spending insights within SpendWise.
+
+---
+
 
 Features
 
